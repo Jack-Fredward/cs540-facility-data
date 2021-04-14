@@ -22,6 +22,12 @@ using gist(geom);
 alter table volusia.parcel add column fsdistance double precision;
 
 --Run Script here
+--15 closest parcels to a firestation
+select parid, fsdistance from volusia.parcel where fsdistance < 1 and fsdistance >0 order by fsdistance limit 15;
+
+--15 fartest parcels to a firestation
+select parid, fsdistance from volusia.parcel where fsdistance is not null order by fsdistance desc limit 15;
+
 
 select fsdistance, count(*) from volusia.parcel where fsdistance is not null group by fsdistance order by fsdistance desc; --limit 100
 
