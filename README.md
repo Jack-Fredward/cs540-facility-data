@@ -1,7 +1,7 @@
 # cs540-facility-data
 Postgres/gis spacial data for the volusia county facilities with a focus on fire stations
 
-An easier way is to:
+An easier way is to: (note this is not working with current version of pgadmin)
 1. Create a table in your postgres database with a column for parid and a column for fsdistance
 2. In pgadmin select this empty table and choose to import data
 3. Select the provided csv file as the import file
